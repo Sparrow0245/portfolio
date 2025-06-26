@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Wassim Koudamra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #b2ebf2, #80deea);
+      color: #333333;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    header h1 {
+      font-size: 3.2rem;
+      margin-bottom: 0.5rem;
+      color: #33b5e5;
+      text-shadow: 0 0 10px rgba(51, 181, 229, 0.7);
+    }
+    header p {
+      font-style: italic;
+      font-size: 1.3rem;
+      color: #666666;
+    }
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.87);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(51, 181, 229, 0.15);
+      color: #333333;
+    }
+    h2 {
+      color: #33b5e5;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #33b5e5;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+      font-size: 2rem;
+      text-shadow: 0 0 5px rgba(51, 181, 229, 0.5);
+    }
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    li::before {
+      content: '\2022';
+      color: #33b5e5;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    li strong {
+      color: #ffca28;
+    }
+    .project {
+      margin-bottom: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 1rem;
+      border-left: 5px solid #33b5e5;
+      color: #333333;
+    }
+    .project h3 {
+      color: #ffb347;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .project p {
+      font-size: 1.1rem;
+    }
+    .contact {
+      background-color: rgba(240, 240, 240, 0.85);
+      color: #444444;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+    .contact a {
+      color: #33b5e5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #osm-map {
+      height: 450px;
+      width: 100%;
+      margin-top: 1rem;
+      border: 2px solid #33b5e5;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(51,181,229,0.3);
+    }
+    .map-legend {
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+      color: #555555;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wassim KOUDAMRA</h1>
+    <p>Étudiant en BTS CIEL | <strong style="color:#ffca28">Cybersécurité & Réseaux</strong> | Hyères, VAR (83)</p>
+  </header>
+
+  <section>
+    <h2>À propos</h2>
+    <p><strong style="color:#ffca28">Étudiant passionné</strong> par les systèmes, réseaux et la cybersécurité, je termine mon BTS CIEL. Mon objectif est d'intégrer le <strong style="color:#ffca28">BUT Réseaux & Télécommunications</strong> (parcours Cybersécurité) afin de renforcer mes compétences techniques et me spécialiser dans la sécurité des infrastructures numériques.</p>
+  </section>
+
+  <section>
+    <h2>Compétences</h2>
+    <ul>
+      <li><strong>Réseaux :</strong> Cisco Packet Tracer, protocoles et architectures réseaux</li>
+      <li><strong>Cybersécurité :</strong> firewall, pentest, agents de surveillance réseau</li>
+      <li><strong>Systèmes :</strong> Linux, Windows</li>
+      <li><strong>Langages/scripts :</strong> Python, C, C++, Bash</li>
+      <li><strong>Virtualisation :</strong> VirtualBox, VMware</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projet effectué en BTS CIEL</h2>
+    <div class="project">
+      <h3>Caméra de chasse connectée – Projet BTS CIEL</h3>
+      <p><strong>Objectif :</strong> Développer une solution de surveillance autonome, connectée et sécurisée.</p>
+      <ul>
+        <li><strong>Serveur :</strong> sauvegarde BDD, sécurisation, gestion utilisateurs via CLI, désactivation services inutiles</li>
+        <li><strong>Web :</strong> sécurité BDD, responsive design, carte OpenStreetMap avec export des détections</li>
+        <li><strong>Réseau :</strong> protocoles sécurisés, tests terrain, analyse de risques</li>
+      </ul>
+
+      <div id="osm-map"></div>
+      <p class="map-legend">
+        🗺️ Carte d'importation des détections tirée du projet de BTS : la caméra de chasse connectée (ex : ESJ La Cordeille, Ollioules).
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Formation</h2>
+    <ul>
+      <li><strong>2023–2025 :</strong> BTS CIEL</li>
+      <li><strong>2022–2023 :</strong> L1 Portail Louis Pasteur (Chimie, SVT, Sciences sanitaires et sociales)</li>
+      <li><strong>2020–2022 :</strong> Licence Informatique, parcours Informatique</li>
+      <li><strong>2020 :</strong> Baccalauréat Scientifique</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Centres d’intérêt</h2>
+    <ul>
+      <li><strong>Loisirs :</strong> musique (guitare, violon, chant), randonnées</li>
+    </ul>
+  </section>
+
+  <div class="contact">
+    <p>📧 Contact : <a href="mailto:wassim.koudamra@gmail.com">wassim.koudamra@gmail.com</a></p>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('osm-map');
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    var target = L.latLng(43.141480, 5.880973);
+    map.setView(target, 15);
+
+    var marker = L.marker(target).addTo(map);
+    marker.bindPopup(
+      `Coordonnées : ${target.lat.toFixed(5)}, ${target.lng.toFixed(5)}`
+    );
+  </script>
+</body>
+</html>
