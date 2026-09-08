@@ -213,7 +213,7 @@
 
 
   <section>
-    <h2>Stage en entreprise :</h2>
+    <h2>Stages en entreprise :</h2>
 
     <div class="project">
       <h3>Stage de 3 mois au sein de l'entreprise <a href="https://www.devox.ma//">Devox</a> — Rabat (Maroc) du 8 Juin 2026 au 24 Août 2026</h3>
@@ -221,9 +221,51 @@
       <p>Mon rapport de stage est consultable <a href="/rapport_de_stage_DEVOX-2026">ici</a> </p>
       <br>
       <ul>
-        <li><strong>Sécurité réseau :</strong></li>
+        <li><strong>Sécurité réseau :</strong>
+          <ul>
+            <li>Conception d'un mécanisme de blocage des IP malveillantes inspiré de <strong>Fail2Ban</strong> (analyse des logs, détection des tentatives de connexion répétées, bannissement automatique)</li>
+            <li>Sécurisation de l'espace administrateur par authentification <strong>Token JWT</strong> et double authentification (<strong>2FA/TOTP</strong>)</li>
+            <li>Durcissement de la base de données MySQL (hachage BCrypt, RBAC, écoute restreinte à l'interface locale) et gestion des droits POSIX sur le serveur Ubuntu</li>
+          </ul>
+        </li>
         <br>
-        <li><strong>Supervision :</strong></li>
+        <li><strong>Supervision :</strong>
+          <ul>
+            <li>Développement de <strong>Sentinelle</strong>, une solution de monitoring pour serveur Ubuntu conçue de zéro en 4 versions itératives, sans dépendance à des outils tiers</li>
+            <li>Collecte en arrière-plan des métriques système (CPU, RAM, disque, SWAP) via des services <strong>Systemd</strong>, avec dashboard web temps réel</li>
+            <li>Conception inspirée d'<strong>Icinga</strong> (sondes et seuils d'état) et de <strong>Cacti</strong> (archivage et restitution graphique des métriques)</li>
+          </ul>
+        </li>
+        <br>
+        <li><strong>Automatisation & déploiement :</strong>
+          <ul>
+            <li>Script maître (<code>lancement.sh</code>) automatisant l'installation complète sur VM Ubuntu Server : dépendances, base de données, backend <strong>Spring Boot</strong>, frontend, reverse proxy <strong>Apache</strong>, services Systemd, permissions POSIX</li>
+            <li>Versionnement et hébergement de l'ensemble du projet sur un dépôt <strong>GitHub</strong> public, servant également de support de documentation</li>
+          </ul>
+        </li>
+        <br>
+        <li><strong>Conteneurisation :</strong>
+          <ul>
+            <li>Architecture <strong>Docker</strong> et <strong>Docker Compose</strong> en 4 microservices indépendants : collecteur, backend, interface web, base de données</li>
+            <li>Gestion des secrets via un fichier d'environnement <code>.env</code> exclu du suivi de version</li>
+            <li>Persistance des données assurée par un volume Docker dédié, indépendante de tout fournisseur cloud</li>
+          </ul>
+        </li>
+        <br>
+        <li><strong>Base de données :</strong>
+          <ul>
+            <li>Conception d'un schéma relationnel normalisé sous <strong>MySQL</strong> (5 tables : hosts, metrics, services_status, events, users)</li>
+            <li>Choix de MySQL plutôt que MongoDB, justifié par la nature relationnelle et structurée des données à stocker</li>
+            <li>Mesures de durcissement : moteur InnoDB, suppression en cascade (ON DELETE CASCADE), encodage utf8mb4</li>
+          </ul>
+        </li>
+        <br>
+        <li><strong>Choix d'architecture :</strong>
+          <ul>
+            <li>Étude comparative entre cookies de session et Token JWT pour la gestion de l'authentification (scalabilité, révocation, compatibilité API/mobile)</li>
+            <li>Choix du Token JWT retenu et justifié pour l'espace administrateur de Sentinelle</li>
+          </ul>
+        </li>
         <br>
       </ul>
     </div>
