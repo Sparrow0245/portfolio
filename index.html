@@ -292,83 +292,86 @@
 
 
 
-
   <section>
-    <h2>Projet Agile dans le cadre de la Start-Up week :</h2>
-    <div class="project">
-      <h3>Déploiement d'une application de sport et coaching lors d'un projet universitaire en groupe à l'occasion de la Start-Up Week (du Lundi 09 Mars 2026 au Vendredi 13 Mars 2026)</h3>
-      <p><strong>Objectif :</strong> Collaboration sur un projet entre étudiants en programmation et étudiants en déploiement d'applications pour créer et déployer l'application <a href="https://app-levelup.fr/">Level Up</a> (du 09/03/2026 au 13/03/2026). Une copie du dépôt Github est consultable <a href="https://github.com/Sparrow0245/projet_start-up_week"> ici</a>. </p>
-      <br>
-      <ul>
-        <li><strong>Contenu du projet côté déploiement :</strong> déploiement en production de l'application sur un VPS</li>
-          <li>Orchestration des services avec <strong>Docker Compose</strong></li>
-          <li>Mise en place de pipelines <strong>CI/CD GitLab</strong> pour l'automatisation des déploiements</li>
-          <li>Configuration du <strong>load balancing</strong> multi-conteneur</li>
-          <li>Configuration du <strong>firewall</strong> pour la sécurisation de l'infrastructure</li>
+    <section>
+      <h2>Projet Agile dans le cadre de la Start-Up week :</h2>
+      <div class="project">
+        <h3>Déploiement d'une application de sport et coaching lors d'un projet universitaire en groupe à l'occasion de la Start-Up Week (du Lundi 09 Mars 2026 au Vendredi 13 Mars 2026)</h3>
+        <p><strong>Objectif :</strong> Collaboration sur un projet entre étudiants en programmation et étudiants en déploiement d'applications pour créer et déployer l'application <a href="https://app-levelup.fr/">Level Up</a> (du 09/03/2026 au 13/03/2026). Une copie du dépôt Github est consultable <a href="https://github.com/Sparrow0245/projet_start-up_week"> ici</a>. </p>
         <br>
-      </ul>
-    </div>
+        <ul>
+          <li><strong>Contenu du projet côté déploiement :</strong> déploiement en production de l'application sur un VPS</li>
+            <li>Orchestration des services avec <strong>Docker Compose</strong></li>
+            <li>Mise en place de pipelines <strong>CI/CD GitLab</strong> pour l'automatisation des déploiements</li>
+            <li>Configuration du <strong>load balancing</strong> multi-conteneur</li>
+            <li>Configuration du <strong>firewall</strong> pour la sécurisation de l'infrastructure</li>
+          <br>
+        </ul>
+      </div>
+    </section>
+  
+    
+    
+    <section>
+      <h2>Projet de Situation d'Apprentissage Évaluée (SAÉ) effectué en BUT 3 Déploiement d'Applications Communicantes et Sécurisées :</h2>
+      <div class="project">
+        <h3>Installation, configuration et déploiement d'une infrastructure informatique dans le cadre d'un projet universitaire en groupe (Bac +3) (du 25 Septembre 2025 au 27 Février 2026)</h3>
+        <p><strong>Objectif :</strong> Création et configuration d'une infrastructure réseau fonctionnelle.</p>
+        <p>Une copie du dépôt git est consultable <a href="https://github.com/Sparrow0245/SAE">ici</a></p>
+        <br>
+        <ul>
+          <li><strong>Réseau public :</strong> accessible avec des adresses IP publiques par toutes les autres organisations (ici les autres groupes) et qui doit offrir les services suivants : </li>
+            <li>Un serveur DNS faisant autorité sur le nom attribué à l'organisation </li>
+            <li>Un serveur email pour le domaine attribué à l'organisation </li>
+            <li>Un serveur web </li>
+          <br>
+          
+          <li><strong>Réseau privé :</strong> cette partie privé offre au moins 2 réseaux privés</li>
+            <li>Un réseau pour les machines du service informatique </li>
+            <li>Un réseau pour les machines du service administratif </li>
+          <br>
+              <p> 
+                <li>Ces deux réseaux privés ont un accès complet à Internet (donc aux réseaux publics des autres organisations). Les flux de ces différents réseau sont séparés pour une meilleure qualité du service, et sont toutefois capable de communiquer. Ces réseaux sont alors sécurisés avec un <strong>firewall</strong> (parefeu).</li>
+              </p>
+          <br>
+            </li>
+          
+          <li><strong>Services :</strong> le réseau privé héberge les services informatiques suivant au minimum pour le bon fonctionnement de l'infrastructure </li>
+            <li>Un service DHCP (Dynamic Host Configuration Protocol) pour toutes les machines privées de l'organisation pour une attribution dynamique des adresses IP</li>
+            <li>Un service LDAP pour la définition des utilisateurs et des groupes des différentes machines </li>
+            <li>Un service NFS stockant les données des différents utilisateurs et des différentes machines </li>
+            <li>Une station de travail avec, au minimum, un navigateur web et un outil de gestion des emails </li>
+          <br>
+          
+        </ul>
+        </p>
+      </div>
+    </section>
+  
+  
+    
+    <section>
+      <h2>Projet effectué en BTS CIEL :</h2>
+      <div class="project">
+        <h3>Caméra de chasse connectée – Projet BTS CIEL</h3>
+        <p><strong>Objectif :</strong> Développer une solution de surveillance autonome, connectée et sécurisée. <p>Mon rapport de projet est consultable <a href="/rapport_de_projet_camera_de_chasse_connectee">ici</a> </p></p>
+        <ul>
+          <li><strong>Serveur :</strong> Sauvegarde BDD, sécurisation, gestion utilisateurs via CLI, désactivation services inutiles</li>
+          <li><strong>Web :</strong> Sécurité BDD, responsive design, carte OpenStreetMap avec export des détections</li>
+          <li><strong>Réseau :</strong> Protocoles sécurisés, tests terrain, analyse de risques</li>
+        </ul>
+  
+        <div id="osm-map"></div>
+        <p class="map-legend">
+          🗺️ Carte d'importation des détections tirée du projet de BTS : la caméra de chasse connectée (ex : ESJ La Cordeille, Ollioules).
+        </p>
+      </div>
+    </section>
+
   </section>
 
-  
-  
-  <section>
-    <h2>Projet de Situation d'Apprentissage Évaluée (SAÉ) effectué en BUT 3 Déploiement d'Applications Communicantes et Sécurisées :</h2>
-    <div class="project">
-      <h3>Installation, configuration et déploiement d'une infrastructure informatique dans le cadre d'un projet universitaire en groupe (Bac +3) (du 25 Septembre 2025 au 27 Février 2026)</h3>
-      <p><strong>Objectif :</strong> Création et configuration d'une infrastructure réseau fonctionnelle.</p>
-      <p>Une copie du dépôt git est consultable <a href="https://github.com/Sparrow0245/SAE">ici</a></p>
-      <br>
-      <ul>
-        <li><strong>Réseau public :</strong> accessible avec des adresses IP publiques par toutes les autres organisations (ici les autres groupes) et qui doit offrir les services suivants : </li>
-          <li>Un serveur DNS faisant autorité sur le nom attribué à l'organisation </li>
-          <li>Un serveur email pour le domaine attribué à l'organisation </li>
-          <li>Un serveur web </li>
-        <br>
-        
-        <li><strong>Réseau privé :</strong> cette partie privé offre au moins 2 réseaux privés</li>
-          <li>Un réseau pour les machines du service informatique </li>
-          <li>Un réseau pour les machines du service administratif </li>
-        <br>
-            <p> 
-              <li>Ces deux réseaux privés ont un accès complet à Internet (donc aux réseaux publics des autres organisations). Les flux de ces différents réseau sont séparés pour une meilleure qualité du service, et sont toutefois capable de communiquer. Ces réseaux sont alors sécurisés avec un <strong>firewall</strong> (parefeu).</li>
-            </p>
-        <br>
-          </li>
-        
-        <li><strong>Services :</strong> le réseau privé héberge les services informatiques suivant au minimum pour le bon fonctionnement de l'infrastructure </li>
-          <li>Un service DHCP (Dynamic Host Configuration Protocol) pour toutes les machines privées de l'organisation pour une attribution dynamique des adresses IP</li>
-          <li>Un service LDAP pour la définition des utilisateurs et des groupes des différentes machines </li>
-          <li>Un service NFS stockant les données des différents utilisateurs et des différentes machines </li>
-          <li>Une station de travail avec, au minimum, un navigateur web et un outil de gestion des emails </li>
-        <br>
-        
-      </ul>
-      </p>
-    </div>
-  </section>
 
 
-  
-  <section>
-    <h2>Projet effectué en BTS CIEL :</h2>
-    <div class="project">
-      <h3>Caméra de chasse connectée – Projet BTS CIEL</h3>
-      <p><strong>Objectif :</strong> Développer une solution de surveillance autonome, connectée et sécurisée. <p>Mon rapport de projet est consultable <a href="/rapport_de_projet_camera_de_chasse_connectee">ici</a> </p></p>
-      <ul>
-        <li><strong>Serveur :</strong> Sauvegarde BDD, sécurisation, gestion utilisateurs via CLI, désactivation services inutiles</li>
-        <li><strong>Web :</strong> Sécurité BDD, responsive design, carte OpenStreetMap avec export des détections</li>
-        <li><strong>Réseau :</strong> Protocoles sécurisés, tests terrain, analyse de risques</li>
-      </ul>
-
-      <div id="osm-map"></div>
-      <p class="map-legend">
-        🗺️ Carte d'importation des détections tirée du projet de BTS : la caméra de chasse connectée (ex : ESJ La Cordeille, Ollioules).
-      </p>
-    </div>
-  </section>
-
-  
   <section>
     <h2>Formation :</h2>
     <ul>
